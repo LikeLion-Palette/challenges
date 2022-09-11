@@ -1,0 +1,372 @@
+@import url("reset.css");
+@import url("tools.css");
+@import url("general.css");
+@import url("font.css");
+
+/*
+  모바일과 PC 스타일 코드를 분리했습니다.
+  모바일 스타일은 mobile.css에서 확인할 수 있습니다.
+*/
+
+/*
+  Class Selector를 사용할 때는
+  어떤 요소에 대한 스타일인지 알아보기 위해
+  필요한 경우라고 판단하면
+  요소명을 붙여주는 방식을 사용했습니다.
+
+  ex: .title보다는 img.title (title만 가지고는 이미지인지 알 수 없음)
+*/
+
+/*
+  User의 선택에 따라
+  글씨를 크게 혹은 작게 볼 수 있도록
+  font-size 등 일부 property는
+  rem / em 단위를 사용했습니다.
+*/
+
+/*
+  property 순서 컨벤션
+  0. position, display, align, visibility
+  1. width, height
+  2. margin, padding, border, box-sizing
+  3. text-align, font, line-height
+  4. color, background-color
+  5. background-image
+  6. animation, opacity 등 기타
+*/
+
+/*
+  주요 색상을 CSS 변수로 선언해
+  추후 편리하게 색상을 바꿀 수 있도록 했습니다.
+*/
+
+:root {
+  --main-color: #5b2386;
+  --second-main-color: #ffff;
+  --sub-color: #babcbe;
+  --point-color: #fcee21;
+}
+
+body {
+  font-weight: 400;
+  font-family: "GmarketSans";
+  color: var(--second-main-color);
+  background-color: var(--main-color);
+}
+
+/*
+  부모인 h1 요소에 position: relative;를 주고
+  img.title에 position: absolute;를 줘서
+  두 img 요소가 상대적인 위치를 가지고 겹칠 수 있도록 했습니다.
+*/
+
+h1.title {
+  /*
+    position: relative;를 줘서
+    stack context를 생성합니다.
+  */
+  position: relative;
+  margin-top: 120px;
+}
+
+h1.title .title__img {
+  position: absolute;
+  /*
+    position: absolute;는 요소를 page flow에서 벗어나게 하기 때문에
+    Inline element인 img 요소임에도 불구하고
+    Block-level element로서 작동합니다.
+  */
+
+  top: 76.5px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 564px;
+  height: 112px;
+}
+
+/*
+  격언
+*/
+
+.quote-wisdom {
+  margin-top: 66px;
+  font-size: 2.25rem;
+  font-weight: 700;
+  font-family: "OTEnjoystoriesBA";
+  line-height: 2.5rem;
+  color: var(--point-color);
+}
+
+/*
+  1만 시간의 법칙 정의
+*/
+
+p.rule-definition {
+  width: 493px;
+  height: 85px;
+  margin-top: 78px;
+  font-size: 1.125rem;
+  line-height: 1.9375rem;
+  background-image: url("../img/quotes.png");
+  background-repeat: no-repeat;
+  background-position: center top 13px;
+  background-size: contain;
+}
+
+p.rule-definition dfn {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+/*
+  입력 폼
+*/
+
+.rule-form {
+  margin-top: 78px;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.rule-form__txt + .rule-form__txt {
+  margin-top: 27px;
+  /*
+    추후 입력 줄이 추가되더라도
+    .rule-form__txt끼리는 27px의 간격이 자동으로 생깁니다.
+  */
+}
+
+.rule-form__input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 228px;
+  height: 57px;
+  margin: 0 17px;
+  border: none;
+  border-radius: 7px;
+  color: var(--main-color);
+}
+
+.rule-form__input:focus {
+  /*
+    실무였다면 디자이너분께
+    input 요소를 눌러 텍스트를 입력할 때
+    추가적인 디자인은 없는지 여쭤봤을 것 같습니다.
+  */
+  outline: none;
+}
+
+.rule-form__input,
+.rule-form__input::placeholder {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "GmarketSans";
+}
+
+.rule-form__txt .rule-form__input::placeholder {
+  color: var(--sub-color);
+}
+
+/*
+  입력 form 바로 밑의 클릭 아이콘과 버튼
+*/
+
+.rule-form__btn-wrapper {
+  margin-top: 115px;
+}
+
+.rule-form__btn-wrapper .click-icon {
+  position: absolute;
+  margin-left: 7px;
+  margin-top: 14px;
+}
+
+/*
+  결과가 표시되는 <section> 요소
+*/
+
+section.result {
+  margin-top: 147px;
+  margin-bottom: 130px;
+  font-size: 1.5rem;
+  line-height: 2;
+  /* line-height를 크게 줘서 결과값이 result__txt의 max-width보다 커질 때 각 줄간의 공백을 줍니다. */
+}
+
+.result__txt {
+  max-width: 765px;
+}
+
+.result__txt + .result__txt {
+  margin-top: 17px;
+}
+
+.result__txt strong {
+  display: inline-block;
+  margin: 0px 12px;
+  font-size: 4.5rem;
+  font-weight: bold;
+  font-size: 4.5rem;
+  line-height: 1;
+
+  /* 
+    Inline element인 <strong>의
+    baseline을 middle로 줌으로써
+    다른 Text node들과 수직으로
+    가운데 정렬이 되도록 합니다.
+  */
+  vertical-align: middle;
+}
+
+section.result div:last-child {
+  /*
+    last-child pesudo class를 이용해
+    결과 내용이 늘어나더라도 항상
+    아래의 interactive elements들을 감싼 div 요소와 결과 내용들이
+    일정한 간격을 유지하도록 했습니다.
+  */
+  margin-top: 127px;
+}
+
+.share-link {
+  margin-left: 18px;
+}
+
+/*
+  footer 영역
+*/
+
+footer small.txt-footer {
+  display: block;
+  /*
+    Block-level element로 바꿔서
+    text-align: center;를 줘 텍스트를 가운데 정렬합니다.
+  */
+  margin-top: 20px;
+  margin-bottom: 70px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-family: "Noto Sans KR";
+  line-height: 1.0625rem;
+}
+
+/* modal 창 */
+
+.cheerup-modal {
+  /*
+    modal 창은 overlay돼야 하는 요소이므로
+    position: fixed;와 top, left를 50%로 줘서
+    좌상단을 Viewport의 가운데로 맞춘 후,
+    transform proprerty를 이용해 창 자체가 가운데로 올 수 있도록 합니다.
+  */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  min-height: 800px;
+  /*
+    min-height 를 줌으로써 modal 창 내의
+    컨텐츠가 늘어도 대응이 가능하도록 합니다.
+  */
+  padding-top: 76px;
+  padding-bottom: 68px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  color: var(--main-color);
+  background-color: var(--second-main-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.cheerup-modal .btn-point-colored {
+  margin-top: 74px;
+}
+
+.cheerup-modal .cheerup-modal__txt {
+  margin-bottom: 29px;
+  font-size: 2.25rem;
+  font-weight: 700;
+  font-family: "OTEnjoystoriesBA";
+}
+
+.cheerup-modal .cheerup-modal__txt strong {
+  font-size: 6rem;
+  line-height: 6.625rem;
+}
+
+.cheerup-modal .cheerup-modal__txt span:not(.hide-mobile) {
+  /*
+    줄바꿈이 필요한 "당신의 꿈을 응원합니다" span 요소에 display:block;을 부여합니다.
+    모바일에서는 보이지 않아야 하는 하트 부분을 묶은 span 요소는 무시할 수 있도록
+    not pesudo class를 이용합니다.
+  */
+  display: block;
+  margin-top: 4px;
+  line-height: 2.5rem;
+}
+
+/*
+  modal 작동 관련 애니메이션
+
+  자세한 로직은 10000hours.js에 적었습니다.
+*/
+
+@keyframes modalOpen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modalClose {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*
+  modal을 감싸는 wrapper div 요소,
+  클릭되면 modal을 닫거나
+  backdrop-filter: blur()를 줘서 뒷배경 초점을
+  흐리게 만드는 효과를 부여합니다.
+*/
+
+.cheerup-modal__wrapper {
+  /*
+    페이지가 처음 로드될 때 modal이 보이지 않도록
+    display:none;을 부여합니다.
+  */
+  display: none;
+
+  /*
+    wrapper는 모든 다른 요소 위에 위치해야 하므로
+    position property를 fixed로 지정합니다.
+  */
+  position: fixed;
+  top: 0;
+
+  /* Viewport 꽉 차게 만듭니다. */
+  width: 100vw;
+  height: 100vh;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: modalClose 0.4s;
+}
+
+.cheerup-modal__wrapper.activated {
+  /*
+    .activated class를 부여하거나 삭제해서
+    애니메이션을 trigger합니다.
+  */
+  animation: modalOpen 0.4s;
+}
