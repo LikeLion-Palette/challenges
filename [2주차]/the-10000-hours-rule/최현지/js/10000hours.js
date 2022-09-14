@@ -1,12 +1,15 @@
 // js file
 
 //input으로 받은 text화면에 띄우기
+const btn_res = document.querySelector('.btn-res')
+const input_wannabe = document.getElementById("input_wannabe");
+const txt_res = document.querySelector(".re-wanabe");
 const write = () => { 
- 
-  
-  /*document.getElementsByClassName(".re-wanabe").text(txt_result)*/
+  txt_res.textContent = input_wannabe.value;
 }
-document.querySelector('.btn-res').addEventListener("click",write)
+console.log(input_wannabe.value); //아무것도 안나와요ㅜㅜ
+btn_res.addEventListener('click',write)
+
 //버튼 누르면 모달창 나타나고 없어지기
 const open = () =>{
   document.querySelector(" .cont-modal").style.display="block";
@@ -17,7 +20,4 @@ const close = () =>{
 document.querySelector('.btn-go').addEventListener('click',open);
 document.querySelector('.cont-modal').addEventListener("click",close);
 
-const txt_result = document.querySelector (".txt-wannabe ");
-txt= txt_result.querySelector('input').value;
-console.log(txt);
-console.log("dd");
+

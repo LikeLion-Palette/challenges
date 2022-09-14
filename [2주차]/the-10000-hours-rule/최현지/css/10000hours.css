@@ -105,6 +105,7 @@ body{
    line-height: 24px;
    
 }
+
 .cont-inp .txt-wannabe input{
     width:228px;
     height:57px;
@@ -123,14 +124,15 @@ body{
     text-align:center;
     font-size:24px;
     line-height:24px;
-    margin-bottom:90px;
     color:#BABCBE;
+    margin-bottom:10px;
 
 }
 
 .cont-inp  .btn-res{
     background-color:#FCEE21;
     width: 565px;
+    margin-top:90px;
 }
 .cont-result{
     color:#FFFFFF;
