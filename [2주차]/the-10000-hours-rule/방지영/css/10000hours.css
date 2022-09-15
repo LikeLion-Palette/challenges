@@ -1,0 +1,238 @@
+@font-face {
+   font-family: "OTEnjoystoriesBA";
+   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
+      format("woff");
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "GmarketSansBold";
+   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+      format("woff");
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "GmarketSansMedium";
+   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+      format("woff");
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Noto Sans KR";
+   font-style: normal;
+   font-weight: 400;
+   src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2")
+         format("woff2"),
+      url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff")
+         format("woff"),
+      url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf")
+         format("opentype");
+}
+
+html,
+body {
+   width: 100%;
+   height: 100%;
+}
+body {
+   font-family: "GmarketSansMedium";
+   color: white;
+   background-color: #5b2386;
+}
+.tit-timelaw {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 140px;
+}
+.title {
+   position: absolute;
+   z-index: 1;
+   width: 564px;
+   height: 112px;
+}
+.clock {
+   position: relative;
+   width: 261px;
+   height: 265px;
+}
+.img-txt {
+   font-family: OTEnjoystoriesBA;
+   font-size: 36px;
+   color: #f5df4d;
+   margin-top: 66px;
+   margin-bottom: 78px;
+   text-align: center;
+}
+.tit-desc {
+   font-size: 24px;
+   font-weight: 700;
+}
+.img-quotes {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: -20px;
+}
+.txt-desc {
+   font-weight: 400;
+   position: relative;
+   text-align: center;
+   font-size: 18px;
+   line-height: 24px;
+}
+.quotes {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 102px;
+}
+.txt-wannabe,
+.txt-time {
+   font-size: 24px;
+   line-height: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.txt-time {
+   margin-top: 60px;
+   margin-bottom: 115px;
+}
+input {
+   font-family: "GmarketSansMedium";
+   text-align: center;
+   color: rgba(186, 188, 190, 1);
+   font-size: 24px;
+   width: 228px;
+   height: 57px;
+   margin: 0 17px;
+   border-radius: 7px;
+   border: none;
+}
+.btn-exc {
+   width: 565px;
+   height: 66px;
+   background-color: #fcee21;
+   font-family: "GmarketSansBold";
+   font-weight: bold;
+   color: #5b2386;
+   border: none;
+   border-radius: 56px;
+   font-size: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto 147px auto;
+   cursor: pointer;
+   position: relative;
+}
+.click {
+   position: absolute;
+   right: 400px;
+   bottom: -330px;
+}
+.txt-wannabe {
+   font-size: 24px;
+}
+.activity,
+.day {
+   font-family: "GmarketSansBold";
+   font-size: 72px;
+   margin: 0 12px;
+}
+.btn-go {
+   width: fit-content;
+   height: 66px;
+   background-color: #fcee21;
+   font-family: "GmarketSansBold";
+   font-weight: bold;
+   color: #5b2386;
+   border: none;
+   border-radius: 56px;
+   font-size: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 0 0 0px;
+   padding: 21px 49px;
+   cursor: pointer;
+   position: relative;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.btn-share {
+   width: 191px;
+   height: 66px;
+   background-color: #fff;
+   font-family: "GmarketSansBold";
+   font-weight: bold;
+   color: #5b2386;
+   border: none;
+   border-radius: 56px;
+   font-size: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 0 0 -900px;
+   cursor: pointer;
+   position: relative;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.btn-set {
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: 130px;
+}
+.logo {
+   display: flex;
+
+   margin: 0 auto 20px auto;
+}
+.txt-footer {
+   font-family: Noto Sans KR;
+   font-size: 12px;
+   line-height: 17.38px;
+   text-align: center;
+}
+.cont-modal {
+   margin: 100px auto 0 auto;
+   width: 700px;
+   height: 750px;
+   background-color: white;
+   border-radius: 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.fighting_msg {
+   font-family: OTEnjoystoriesBA;
+   font-size: 36px;
+   color: #5b2386;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 29px;
+}
+.fighting {
+   font-family: OTEnjoystoriesBA;
+   font-size: 96px;
+   color: #5b2386;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 70px;
+   margin-bottom: -40px;
+}
+.lion_img {
+   width: 433px;
+   height: 337px;
+   display: block;
+   margin-bottom: 74px;
+}
