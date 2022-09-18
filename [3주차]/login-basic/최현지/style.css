@@ -1,4 +1,9 @@
-
+@font-face {
+  font-family: 'SpoqaHanSansNeo-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 .login{
   width:350px;
   text-align:center;
@@ -20,6 +25,7 @@ a{
   text-align:left;
   font-size: 12px;
   margin-bottom:18px;
+  font-family: 'SpoqaHanSansNeo';
 }
 .login-button{
   width:318px;
@@ -36,6 +42,7 @@ a{
 }
 .login-bar{
  margin-bottom:18px;
+ font-family: 'SpoqaHanSansNeo';
 }
 .login__find{
   float:left;
@@ -46,11 +53,12 @@ a{
 }
 .pw_bar::before{/**이 부분 어떻게 했는지 물어보기**/
   content:"";
-  margin:0px 4px;
   border-left:1px solid #767676;
+  vertical-align:sub;
 }
 .login__find__user{
   vertical-align:sub;
+  font-size:12px; 
 }
 .login__signup{
   font-size:12px;
