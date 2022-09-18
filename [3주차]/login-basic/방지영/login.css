@@ -1,0 +1,62 @@
+@font-face {
+   font-family: "SpoqaHanSansNeo-Regular";
+   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+      format("woff");
+   font-weight: normal;
+   font-style: normal;
+}
+body {
+   margin: 50px;
+   font-family: "SpoqaHanSansNeo-Regular";
+}
+.login {
+   width: 350px;
+   height: 140px;
+   border: 1px solid #dbdbdb;
+   box-sizing: border-box;
+   border-radius: 5px;
+}
+.msg {
+   font-size: 12px;
+   margin: 19px 16px 16px;
+}
+button {
+   width: 318px;
+   height: 40px;
+   border-radius: 4px;
+   font-size: 12px;
+   color: white;
+   background-color: #711bff;
+   border: transparent;
+   margin: 0 16px 0 16px;
+}
+.logo {
+   width: 64px;
+   height: 18px;
+   vertical-align: bottom;
+}
+.sub_area {
+   font-size: 12px;
+   color: #767676;
+   margin: 17px 16px 18px 18px;
+}
+.lock {
+   width: 16px;
+   height: 16px;
+   vertical-align: sub;
+}
+.user {
+   width: 16px;
+   height: 16px;
+   vertical-align: sub;
+}
+.id_pw {
+   display: inline;
+}
+.link_join {
+   display: inline;
+   float: right;
+}
+.sign_up {
+   display: inline;
+}
