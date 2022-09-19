@@ -79,13 +79,23 @@ body{
 	opacity:0.8;
 	
 }
-/*사진 가운데 글씨를 다른 방법으로 가운데 정렬 하는 다른 방법이 궁금해요*/
+/*사진 가운데 글씨 어떻게 설정했는지 보기*/
 .contents-wrapper .contents-ele-wrapper span{
 	position:absolute;
 	top:80px;
 	left:100px;
 	font-size:30px;
 	color:white;
+	
+}
+.contents-wrapper .contents-ele-wrapper:nth-child(3) span:nth-child(2){
+
+	position:relative;
+	color:white;
+	top:90px;
+	left:180px;
+	font-size:30px;
+
 	
 }
 
