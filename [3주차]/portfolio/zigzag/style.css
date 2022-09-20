@@ -90,12 +90,10 @@ body{
 }
 .contents-wrapper .contents-ele-wrapper:nth-child(3) span:nth-child(2){
 
-	position:relative;
+	position:absolute;
 	color:white;
-	top:90px;
-	left:180px;
-	font-size:30px;
-
+	left:900px;
+	top:80px;
 	
 }
 
