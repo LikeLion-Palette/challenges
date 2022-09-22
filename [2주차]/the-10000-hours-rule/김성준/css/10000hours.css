@@ -34,7 +34,7 @@ html, body {
     font-family: 'GmarketSansMedium';
     background-color: #5b2386;
     color: #fff;
-    position: relative;
+    /* position: relative; */
 }
 
 main {
@@ -52,6 +52,15 @@ main {
     position: relative;
 
     margin-bottom: 50px;
+}
+
+.txt-hide {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
 }
 
 .img-clock {
