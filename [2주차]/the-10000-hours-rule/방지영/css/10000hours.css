@@ -134,9 +134,13 @@ input {
    position: relative;
 }
 .click {
-   position: absolute;
+   /* position: absolute;
    right: 400px;
-   bottom: -330px;
+   bottom: -330px; */
+   float: right;
+   position: absolute;
+   right: -80px;
+   top: 15px;
 }
 .txt-wannabe {
    font-size: 24px;
@@ -185,9 +189,10 @@ input {
    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .btn-set {
+   width: 565px;
    display: flex;
-   justify-content: space-around;
-   margin-bottom: 130px;
+   margin: 0 auto 130px;
+   justify-content: space-between;
 }
 .logo {
    display: flex;
