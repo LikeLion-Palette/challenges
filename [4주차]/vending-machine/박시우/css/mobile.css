@@ -1,0 +1,22 @@
+@media (max-width: 755px) {
+  body {
+    background-color: #ffffff;
+  }
+  .header-title {
+    margin-bottom: 0;
+  }
+  h1 > img {
+    width: 188px;
+    height: 88px;
+  }
+  .wrapper {
+    display: block;
+    width: 360px;
+  }
+  .section-vm {
+    padding: 18px 27px 11px 27px;
+  }
+  .section-mybag {
+    padding-top: 32px;
+  }
+}

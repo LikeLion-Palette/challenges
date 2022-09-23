@@ -1,0 +1,356 @@
+@import url(reset.css);
+
+/* IR Technique */
+
+.screen-out {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* Custom Resets */
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #eae8fe;
+}
+
+/* Reusables */
+
+.form-sm {
+  display: flex;
+  grid-column: 1 / span 2;
+}
+
+.form-sm > *:nth-child(1) {
+  width: 200px;
+}
+
+.form-sm > *:nth-child(2) {
+  width: 94px;
+  margin-left: 12px;
+}
+
+.price-indicator {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 6px 10px;
+  font-size: 0.875rem;
+  border-radius: 5px;
+  background: #eae8fe;
+}
+
+.input-cash-balance {
+  display: inline;
+
+  width: 100px;
+  /* input의 value에 따라 유동적으로 width를 조절할 수 없었음 */
+
+  margin-left: auto;
+  padding: 0;
+  outline: none;
+  font-size: inherit;
+  text-align: end;
+  background-color: transparent;
+  border: none;
+}
+
+.won::after {
+  content: "원";
+}
+
+.amount.won::after,
+.cash-balance.won::after {
+  display: inline-block;
+  margin-left: 3px;
+}
+
+.amount.won::after {
+  margin-left: 3px;
+  font-weight: 700;
+}
+
+.list-beverage {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  background-color: #eae8fe;
+  overflow-y: auto;
+}
+
+.list-beverage::-webkit-scrollbar {
+  width: 10px;
+}
+
+.list-beverage::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 3px solid transparent;
+}
+
+.list-beverage li {
+  margin-bottom: 6px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.list-beverage li:last-child {
+  margin-bottom: 0;
+}
+
+.item-beverage__figure {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px 8px 8px;
+}
+
+.item-beverage__figure img {
+  display: inline-block;
+  width: 18px;
+  height: 33px;
+}
+
+.item-beverage__figure figcaption {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 0.5625rem;
+  line-height: 0.8125rem;
+}
+
+.item-beverage__figure .item-beverage__count {
+  width: 30px;
+  height: 30px;
+  font-size: 0.875rem;
+  line-height: 30px;
+  text-align: center;
+  margin-left: auto;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+.btn-white,
+.btn-colored {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.1875rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.btn-white {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.btn-white::before {
+  content: " ";
+  position: absolute;
+  inset: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.btn-colored {
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #6327fe;
+}
+
+/* Components */
+
+.header-title {
+  margin-bottom: 44px;
+}
+
+h1 > img {
+  display: block;
+  width: 386px;
+  height: 180px;
+  margin: auto;
+}
+
+/* Layout */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 28px;
+  width: 748px;
+  height: 545px;
+  margin: auto;
+}
+
+.section-vm,
+.section-amount,
+.section-mybag {
+  width: 360px;
+  background-color: #ffffff;
+}
+
+.section-vm {
+  height: 545px;
+  padding: 31px 27px 28px 27px;
+}
+
+.section-amount {
+  height: 50px;
+  padding: 9px 27px;
+}
+
+.section-mybag {
+  display: flex;
+  flex-direction: column;
+  height: 474px;
+  padding: 26px 27px 25px 27px;
+}
+
+/* Vending Machine */
+
+.beverage-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.beverage-menu-card {
+  display: block;
+  width: 94px;
+  padding: 11px 12px 9px 12px;
+  background-color: #fff;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.beverage-menu-card:hover {
+  outline: 3px solid #6327fe;
+}
+
+.beverage-menu-card.no-stock {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  z-index: 1;
+}
+
+.beverage-menu-card.no-stock:hover {
+  outline: none;
+}
+
+.beverage-menu-card.no-stock::before {
+  content: " ";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+.beverage-menu-card.no-stock::after {
+  content: " ";
+  position: absolute;
+  inset: 0;
+  background: no-repeat url(../img/Sold-out.png) center/57.51px 44.85px;
+  transform: rotate(5.15deg);
+  z-index: 20;
+}
+
+.beverage-menu-card img {
+  display: block;
+  width: 36px;
+  height: 65px;
+  margin: auto;
+  margin-bottom: 6px;
+}
+
+.beverage-menu-card__name {
+  font-weight: 500;
+  font-size: 0.5625rem;
+  line-height: 0.8125rem;
+}
+
+.beverage-menu-card__price {
+  display: block;
+  margin-top: 7px;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: #ffffff;
+  background-color: #6327fe;
+}
+
+.wrapper-vm-logics {
+  display: grid;
+  grid-template-rows: 33px 33px 106px;
+  grid-template-columns: 200px 94px;
+  row-gap: 12px;
+  column-gap: 11px;
+}
+
+.input-deposit {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+.input-deposit::placeholder {
+  text-align: start;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.1875rem;
+  color: #bdbdbd;
+}
+
+.section-mybag__title {
+  margin: auto;
+  margin-bottom: 13px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 20.27px;
+  text-align: center;
+}
+
+.amount strong {
+  display: inline-block;
+  margin-left: auto;
+  font-weight: 700;
+}
+
+.total-amount {
+  display: block;
+  margin-top: 6px;
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 17.38px;
+}
