@@ -1,0 +1,164 @@
+:root {
+    font-family: 'Montserrat', sans-serif;
+	/*
+	font-weight: 500;
+	font-weight: 700;
+	*/
+}
+
+/*
+	진한 보라색 : #673399
+	연한 보라색 : #bd8fe8
+	하단 주황색 : oranged, #ff4500
+	list-style : custom -> pseudo elements
+*/
+
+/* Reset */
+h1, h2, h3, p, ul, li{
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3 {
+	font-size: initial;
+}
+
+body {
+	background-color: #673399;
+}
+
+strong {
+	font-weight: inherit;
+	line-height: 1;
+}
+
+li {
+	list-style: none;
+}
+
+/* Components */
+.wrapper {
+	width: 1080px;
+	margin: 100px auto;
+}
+
+/* Header */
+.project-header {
+	width: inherit;
+	height: 150px;
+	margin-bottom: 95px;
+	display: flex;
+	flex-direction: row;
+}
+
+.project-title {
+	width: 26%;
+	font-size: 40px;
+	font-weight: 500;
+	vertical-align: top;
+	color: white;
+	line-height: 48px;
+}
+
+.project-title strong {
+	box-shadow: 0 -20px 0 0 #ff4500 inset;
+}
+
+.project-desc {
+	width: 560px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 22px;
+	display: flex;
+	align-items: center;
+	color: #bd8fe8;
+}
+
+.project-desc::before {
+	content: "";
+	width: 51%;
+	height: 2px;
+	flex-grow: 1;
+	margin: 3px 24px 0 3px;
+	background-color: #bd8fe8;
+}
+
+/* Section */
+.project-contents {
+	background-color: white;
+	width: inherit;
+	height: 163px;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 24px;
+}
+.project-contents:nth-child(2n+1) {
+	background-color: white;
+	height: 163px;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+.contents-header {
+	width: 26%;
+	background-size: cover;
+	background-position: center;
+}
+
+.img-cover {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(103, 51, 153, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contents-title {	
+	font-size: 30px;
+	font-weight: 500;
+	color: white;
+}
+
+.photo-1 {
+	background-image: url(images/photo01.png);
+}
+.photo-2 {
+	background-image: url(images/photo02.png);
+}
+.photo-3 {
+	background-image: url(images/photo03.png);
+}
+
+.contents {
+	padding: 21px;
+}
+
+.contents-subtitle {
+	font-size: 18px;
+	color:#673399;
+	line-height: 1;
+	vertical-align: top;
+	margin-bottom: 25px;
+	padding-left: 3px;
+}
+
+.contents-list li {
+	font-size: 14px;
+	line-height: 1;
+	vertical-align: top;
+	margin-bottom: 10px;
+	padding: 3px;
+	color: #555555;
+}
+
+.contents-list li::before {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #bd8fe8;
+	margin-inline-end: 6px;
+}
