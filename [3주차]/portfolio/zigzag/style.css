@@ -1,0 +1,125 @@
+:root {
+    font-family: 'Montserrat', sans-serif;
+	/*
+	font-weight: 500;
+	font-weight: 700;
+	*/
+}
+body{
+	margin:100px auto;
+	background-color: #51318b;
+	text-align:center;
+}
+.blind{
+	display: none;
+}
+.wrapper{
+	margin:0 auto;
+	padding:100px;
+	width:1080px;
+	background-color: #51318b;
+	font-family: 'Montserrat', sans-serif;
+}
+.portfolio-header{
+	display:flex;
+	margin-bottom:100px;
+
+	
+}
+.portfolio-header .portfolio-title{
+ color:white;
+ font-size:40px;
+ font-weight: 400;
+ text-align:left;
+ font-family: 'Montserrat', sans-serif;
+}
+.portfolio-header .portfolio-title span{
+	display:inline-block;
+	box-shadow: 0 -20px 0 0 inset #d9501a;
+ }
+.portfolio-header .portfolio-subtitle{
+	display:block;
+	width:76em;
+	text-align:left;
+	font-size:14px;
+	color:#a887e1;
+	padding:30px 250px 30px 80px; 
+	line-height: 25px;
+
+}
+/*heaer쪽 줄 생성 , 다른 방법 확인해보기*/
+.portfolio-header .portfolio-subtitle::before{
+	content:"";
+	display:block;
+	position:relative;
+	width:70px;
+	top:40px;
+	left:-100px;
+	border-bottom: 1px solid #a887e1;
+}
+.contents-wrapper{
+	
+}
+.contents-wrapper .contents-ele-wrapper{
+	display:flex;
+	position:relative;
+	background-color: white;
+	margin-bottom:24px;
+
+}
+/*마지막 margin-bottom은 없앰*/
+.contents-wrapper .contents-ele-wrapper:last-child{
+	margin-bottom:0px;
+}
+.contents-wrapper .contents-ele-wrapper:nth-child(3){
+	flex-direction:row-reverse;
+}
+.contents-wrapper .contents-ele-wrapper img{
+	width:26%;
+	opacity:0.8;
+	
+}
+/*사진 가운데 글씨 어떻게 설정했는지 보기*/
+.contents-wrapper .contents-ele-wrapper span{
+	position:absolute;
+	top:80px;
+	left:100px;
+	font-size:30px;
+	color:white;
+	
+}
+.contents-wrapper .contents-ele-wrapper:nth-child(3) span:nth-child(2){
+
+	position:absolute;
+	color:white;
+	left:900px;
+	top:80px;
+	
+}
+
+.contents-wrapper .contents-ele-wrapper .contents-text-wrapper{
+	padding:24px;
+	text-align:left;
+	flex:1;
+}
+.contents-wrapper .contents-ele-wrapper .portfolio-contents__tit{
+	font-size:18px;
+	margin-bottom:32px;
+	font-family: 'Montserrat', sans-serif;
+	color: #51318b;
+	font-weight: 900;
+}
+.contents-wrapper .contents-ele-wrapper .portfolio-text li{
+	font-size:14px;
+	margin-bottom:10px;
+}
+/**점만들기**/
+.contents-wrapper .contents-ele-wrapper .portfolio-text li::before{
+	content:"";
+	display:inline-block;
+	margin-right:5px;
+	background-color: #a887e1;
+	width:10px;
+	height:10px;
+	border-radius: 50%;
+}
